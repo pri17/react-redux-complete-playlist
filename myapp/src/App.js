@@ -11,12 +11,21 @@ class App extends Component {
     ]
   }
 
+  addNinja = (nin) =>{
+      console.log(nin);
+      nin.id = Math.random();
+      let newNin = [...this.state.ninjas,nin];//add new element to the copy of the original list
+      this.setState({
+        ninjas:newNin
+      })
+  }
+
   render() {
     return (
       <div className="App">
         <h1>My first React app</h1>
         <Ninjas nn = {this.state.ninjas}/>
-        <AddNinjas></AddNinjas>
+        <AddNinjas addNinja = {this.addNinja}></AddNinjas>
       </div>
     );
   }
