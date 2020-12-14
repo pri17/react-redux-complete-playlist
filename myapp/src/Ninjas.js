@@ -1,24 +1,12 @@
 import React, { Component } from 'react'
 
-const Ninjas = (props) =>{
-    // const {nn} = props;
-    // const ninjaList = nn.map(nnn => {
-    //   if(nnn.age>16){
-    //   return (
-    //     <div className="ninja" key={nnn.id}>
-    //       <div>Name: {nnn.name}</div>
-    //       <div>Age: {nnn.age}</div>
-    //     </div>
-    //   )
-    //   }
-    // })
-
-    const {nn} = props;
-    const ninjaList = nn.map(nnn => {
-      return nnn.age>16 ? ( 
-      <div className="ninja" key={nnn.id}>
-        <div>Name: {nnn.name}</div>
-        <div>Age: {nnn.age}</div>
+const Ninjas = ({nn,deleteNinja}) =>{
+    const ninjaList = nn.map(ninja => {
+      return ninja.age>16 ? ( 
+      <div className="ninja" key={ninja.id}>
+        <div>Name: {ninja.name}</div>
+        <div>Age: {ninja.age}</div>
+        <button onClick={()=>{deleteNinja(ninja.id)}}>Delete</button>
     </div> 
     ):(null);
 
