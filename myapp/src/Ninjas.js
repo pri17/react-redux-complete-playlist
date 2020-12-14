@@ -1,3 +1,5 @@
+//UI Component
+
 import React, { Component } from 'react'
 
 const Ninjas = ({nn,deleteNinja}) =>{
