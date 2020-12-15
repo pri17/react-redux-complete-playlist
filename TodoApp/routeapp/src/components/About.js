@@ -1,6 +1,9 @@
 import React from 'react'
 
-const About = () =>{
+const About = (prop) =>{
+    // setTimeout(() => {
+    //     prop.history.push('/')
+    // }, (2000));
     return (
         <div className="container">
             <h4 className="center">About</h4>
