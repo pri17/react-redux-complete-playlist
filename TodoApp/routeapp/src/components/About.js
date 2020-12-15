@@ -1,4 +1,5 @@
 import React from 'react'
+import Rainbow from '../hoc/Rainbow'
 
 const About = (prop) =>{
     // setTimeout(() => {
@@ -12,4 +13,4 @@ const About = (prop) =>{
     )
 }
 
-export default About
+export default Rainbow(About)
